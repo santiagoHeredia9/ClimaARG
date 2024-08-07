@@ -14,7 +14,7 @@ export default function Main() {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {!weather.length ? (
         <ActivityIndicator />
       ) : (
@@ -24,7 +24,7 @@ export default function Main() {
           renderItem={({ item }) => <StateWeather data={item} />}
         />
       )}
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -33,5 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    padding: 6,
   },
 });
